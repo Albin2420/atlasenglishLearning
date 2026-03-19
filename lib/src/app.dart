@@ -1,0 +1,17 @@
+import 'package:atlas_learning/src/presentation/screens/onBoarding/onboarding.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:get/get.dart';
+
+class AtlasEnglishLearningApp extends StatelessWidget {
+  const AtlasEnglishLearningApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      builder: EasyLoading.init(),
+      home: Onboarding(),
+    );
+  }
+}
