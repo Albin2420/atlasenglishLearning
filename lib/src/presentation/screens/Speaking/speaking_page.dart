@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../Components/homebottom_nav.dart';
-import '../../controller/Writing/writing_controller.dart';
+import '../../controller/Speaking/speaking_controller.dart';
 
-class WritingPage extends StatelessWidget {
-  WritingPage({super.key});
+class SpeakingPage extends StatelessWidget {
+  SpeakingPage({super.key});
 
-  final WritingController controller = Get.put(WritingController());
+  final SpeakingController controller = Get.put(SpeakingController());
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +29,9 @@ class WritingPage extends StatelessWidget {
                   ),
                   const SizedBox(width: 20),
                   const Text(
-                    "Writing",
+                    "Speaking",
                     style: TextStyle(
-                      fontSize: 32,
+                      fontSize: 34,
                       fontFamily: 'ClashDisplay',
                       fontWeight: FontWeight.w600,
                     ),
@@ -61,10 +61,13 @@ class WritingPage extends StatelessWidget {
                             vertical: 15,
                           ),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFFFD2D2),
-                            borderRadius: BorderRadius.circular(20),
+                            color: const Color(0xFFFFF2BC),
+                            borderRadius: BorderRadius.circular(28),
                             border: isSelected
-                                ? Border.all(color: Colors.red, width: 1.8)
+                                ? Border.all(
+                                    color: Color(0xFFD6A64D),
+                                    width: 1.8,
+                                  )
                                 : null,
                           ),
                           child: Text(
