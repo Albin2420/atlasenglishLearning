@@ -12,8 +12,8 @@ class AtlasEnglishLearningApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       builder: EasyLoading.init(),
-      home: Onboarding(),
-      // home: HomeScreen(),
+      // home: Onboarding(),
+      home: HomeScreen(),
     );
   }
 }
