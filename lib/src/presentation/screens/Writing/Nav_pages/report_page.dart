@@ -1,16 +1,16 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../widgets/Writing/submit_button.dart';
 
 class ReportPage extends StatelessWidget {
-  const ReportPage({super.key});
+  final String question;
+  const ReportPage({super.key, required this.question});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xfff2f2f2),
-
-      /// 🔹 FIXED APP BAR
       appBar: AppBar(
         backgroundColor: const Color(0xfff2f2f2),
         elevation: 0,
@@ -29,19 +29,18 @@ class ReportPage extends StatelessWidget {
           ),
         ),
       ),
-
-      /// 🔹 SCROLLABLE BODY
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(height: 20),
 
-              /// Instruction
-              const Text(
-                "Write a report about the importance of clean campus environment.",
-                style: TextStyle(
+              /// QUESTION FROM JSON
+              Text(
+                question,
+                style: const TextStyle(
                   fontSize: 17,
                   fontFamily: "ClashDisplay",
                   fontWeight: FontWeight.w500,
@@ -50,7 +49,6 @@ class ReportPage extends StatelessWidget {
 
               const SizedBox(height: 25),
 
-              /// REPORT CARD
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
@@ -64,12 +62,9 @@ class ReportPage extends StatelessWidget {
                     )
                   ],
                 ),
-
-                child: Column(
+                child: const Column(
                   children: [
-
-                    /// Title
-                    const TextField(
+                    TextField(
                       decoration: InputDecoration(
                         hintText: "Report Title",
                         hintStyle: TextStyle(
@@ -79,11 +74,8 @@ class ReportPage extends StatelessWidget {
                         border: UnderlineInputBorder(),
                       ),
                     ),
-
-                    const SizedBox(height: 15),
-
-                    /// Introduction
-                    const TextField(
+                    SizedBox(height: 15),
+                    TextField(
                       maxLines: 2,
                       decoration: InputDecoration(
                         hintText: "Introduction",
@@ -94,11 +86,8 @@ class ReportPage extends StatelessWidget {
                         border: UnderlineInputBorder(),
                       ),
                     ),
-
-                    const SizedBox(height: 15),
-
-                    /// Main Content
-                    const TextField(
+                    SizedBox(height: 15),
+                    TextField(
                       maxLines: 8,
                       decoration: InputDecoration(
                         hintText: "Write your report here...",
@@ -109,11 +98,8 @@ class ReportPage extends StatelessWidget {
                         border: UnderlineInputBorder(),
                       ),
                     ),
-
-                    const SizedBox(height: 15),
-
-                    /// Conclusion
-                    const TextField(
+                    SizedBox(height: 15),
+                    TextField(
                       maxLines: 2,
                       decoration: InputDecoration(
                         hintText: "Conclusion",
@@ -124,11 +110,8 @@ class ReportPage extends StatelessWidget {
                         border: UnderlineInputBorder(),
                       ),
                     ),
-
-                    const SizedBox(height: 15),
-
-                    /// Recommendation
-                    const TextField(
+                    SizedBox(height: 15),
+                    TextField(
                       maxLines: 2,
                       decoration: InputDecoration(
                         hintText: "Recommendation",
@@ -148,14 +131,12 @@ class ReportPage extends StatelessWidget {
           ),
         ),
       ),
-
-      /// 🔹 FIXED SUBMIT BUTTON
       bottomNavigationBar: Container(
         padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
         color: const Color(0xfff2f2f2),
         child: SubmitButton(
           onPressed: () {
-            print("Report Submitted");
+            log("Report Submitted");
           },
         ),
       ),

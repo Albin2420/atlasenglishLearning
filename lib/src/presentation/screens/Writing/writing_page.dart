@@ -43,43 +43,44 @@ class WritingPage extends StatelessWidget {
 
               /// LIST
               Expanded(
-                child: ListView.builder(
-                  itemCount: controller.topics.length,
-                  itemBuilder: (context, index) {
-                    return Obx(() {
-                      final isSelected =
-                          controller.selectedIndex.value == index;
-
-                      return GestureDetector(
-                        onTap: () {
-                          controller.selectTopic(index);
-                        },
-                        child: Container(
-                          margin: const EdgeInsets.only(bottom: 22),
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 24,
-                            vertical: 15,
-                          ),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFFFD2D2),
-                            borderRadius: BorderRadius.circular(20),
-                            border: isSelected
-                                ? Border.all(color: Colors.red, width: 1.8)
-                                : null,
-                          ),
-                          child: Text(
-                            controller.topics[index],
-                            style: const TextStyle(
-                              fontSize: 20,
-                              fontFamily: 'ClashDisplay',
-                              fontWeight: FontWeight.w500,
+                child: Obx(() {
+                  if (controller.topics.isEmpty) {
+                    return const Center(child: CircularProgressIndicator());
+                  }
+                  return ListView.builder(
+                    itemCount: controller.topics.length,
+                    itemBuilder: (context, index) {
+                      return Obx(() {
+                        final isSelected = controller.selectedIndex.value == index;
+                        return GestureDetector(
+                          onTap: () => controller.selectTopic(index),
+                          child: Container(
+                            margin: const EdgeInsets.only(bottom: 22),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 24,
+                              vertical: 15,
+                            ),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFFFD2D2),
+                              borderRadius: BorderRadius.circular(20),
+                              border: isSelected
+                                  ? Border.all(color: Colors.red, width: 1.8)
+                                  : null,
+                            ),
+                            child: Text(
+                              controller.topics[index],
+                              style: const TextStyle(
+                                fontSize: 20,
+                                fontFamily: 'ClashDisplay',
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ),
-                        ),
-                      );
-                    });
-                  },
-                ),
+                        );
+                      });
+                    },
+                  );
+                }),
               ),
             ],
           ),
