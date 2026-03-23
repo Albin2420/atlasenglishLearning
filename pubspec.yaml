@@ -77,6 +77,19 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+    - family: ClashDisplay
+      fonts:
+        - asset: assets/fonts/clash-display-font/ClashDisplay-Extralight.otf
+          weight: 200
+        - asset: assets/fonts/clash-display-font/ClashDisplay-Light.otf
+          weight: 300
+        - asset: assets/fonts/clash-display-font/ClashDisplay-Regular.otf
+          weight: 400
+        - asset: assets/fonts/clash-display-font/ClashDisplay-Medium.otf
+          weight: 500
+        - asset: assets/fonts/clash-display-font/ClashDisplay-Semibold.otf
+          weight: 600
   # fonts:
   #   - family: Schyler
   #     fonts:

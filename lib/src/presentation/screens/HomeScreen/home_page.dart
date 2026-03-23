@@ -1,5 +1,6 @@
 import 'package:atlas_learning/src/presentation/widgets/HomeScreen/daily_speak.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import '../../controller/HomeScreen/home_screen_controller.dart';
 import '../../widgets/HomeScreen/topic_card.dart';
@@ -11,6 +12,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.light,
+      ),
+    );
     return Scaffold(
       backgroundColor: const Color(0xFFF2F2F2),
       body: SafeArea(
@@ -29,6 +37,7 @@ class HomeScreen extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
+                        SizedBox(height: 10),
                         Text(
                           "Hello",
                           style: TextStyle(
@@ -52,7 +61,9 @@ class HomeScreen extends StatelessWidget {
                     SizedBox(height: 29),
                     const CircleAvatar(
                       radius: 28,
-                      backgroundImage: AssetImage('assets/images/johndo.png'),
+                      backgroundImage: AssetImage(
+                        'assets/images/default_profile.png',
+                      ),
                     ),
                   ],
                 ),
