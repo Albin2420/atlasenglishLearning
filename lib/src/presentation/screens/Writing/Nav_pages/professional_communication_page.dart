@@ -1,16 +1,16 @@
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../widgets/Writing/submit_button.dart';
 
 class ProfessionalCommunicationPage extends StatelessWidget {
-  const ProfessionalCommunicationPage({super.key});
+  final String question;
+  const ProfessionalCommunicationPage({super.key, required this.question});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xfff2f2f2),
-
-      /// 🔹 FIXED APP BAR
       appBar: AppBar(
         backgroundColor: const Color(0xfff2f2f2),
         elevation: 0,
@@ -29,19 +29,18 @@ class ProfessionalCommunicationPage extends StatelessWidget {
           ),
         ),
       ),
-
-      /// 🔹 SCROLLABLE BODY
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(height: 20),
 
-              /// Instruction
-              const Text(
-                "Write a professional message to your manager requesting a meeting to discuss a project update.",
-                style: TextStyle(
+              /// QUESTION FROM JSON
+              Text(
+                question,
+                style: const TextStyle(
                   fontSize: 17,
                   fontFamily: "ClashDisplay",
                   fontWeight: FontWeight.w500,
@@ -50,7 +49,6 @@ class ProfessionalCommunicationPage extends StatelessWidget {
 
               const SizedBox(height: 25),
 
-              /// CARD
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
@@ -64,12 +62,9 @@ class ProfessionalCommunicationPage extends StatelessWidget {
                     )
                   ],
                 ),
-
-                child: Column(
+                child: const Column(
                   children: [
-
-                    /// Recipient
-                    const TextField(
+                    TextField(
                       style: TextStyle(fontFamily: "ClashDisplay"),
                       decoration: InputDecoration(
                         hintText: "To / Recipient",
@@ -85,11 +80,8 @@ class ProfessionalCommunicationPage extends StatelessWidget {
                         ),
                       ),
                     ),
-
-                    const SizedBox(height: 15),
-
-                    /// Subject
-                    const TextField(
+                    SizedBox(height: 15),
+                    TextField(
                       style: TextStyle(fontFamily: "ClashDisplay"),
                       decoration: InputDecoration(
                         hintText: "Subject / Topic",
@@ -105,11 +97,8 @@ class ProfessionalCommunicationPage extends StatelessWidget {
                         ),
                       ),
                     ),
-
-                    const SizedBox(height: 15),
-
-                    /// Message
-                    const TextField(
+                    SizedBox(height: 15),
+                    TextField(
                       maxLines: 8,
                       style: TextStyle(fontFamily: "ClashDisplay"),
                       decoration: InputDecoration(
@@ -126,11 +115,8 @@ class ProfessionalCommunicationPage extends StatelessWidget {
                         ),
                       ),
                     ),
-
-                    const SizedBox(height: 15),
-
-                    /// Closing
-                    const TextField(
+                    SizedBox(height: 15),
+                    TextField(
                       style: TextStyle(fontFamily: "ClashDisplay"),
                       decoration: InputDecoration(
                         hintText: "Regards / Thank you",
@@ -155,14 +141,12 @@ class ProfessionalCommunicationPage extends StatelessWidget {
           ),
         ),
       ),
-
-      /// 🔹 FIXED SUBMIT BUTTON
       bottomNavigationBar: Container(
         padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
         color: const Color(0xfff2f2f2),
         child: SubmitButton(
           onPressed: () {
-            print("Professional Communication Submitted");
+            log("Professional Communication Submitted");
           },
         ),
       ),

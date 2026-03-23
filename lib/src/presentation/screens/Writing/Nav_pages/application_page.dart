@@ -4,14 +4,13 @@ import 'package:get/get.dart';
 import '../../../widgets/Writing/submit_button.dart';
 
 class ApplicationPage extends StatelessWidget {
-  const ApplicationPage({super.key});
+  final String question;
+  const ApplicationPage({super.key, required this.question});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xfff2f2f2),
-
-      /// 🔹 APP BAR (FIXED)
       appBar: AppBar(
         backgroundColor: const Color(0xfff2f2f2),
         elevation: 0,
@@ -30,21 +29,18 @@ class ApplicationPage extends StatelessWidget {
           ),
         ),
       ),
-
-      /// 🔹 BODY (SCROLLABLE)
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               const SizedBox(height: 20),
 
-              /// Instruction
-              const Text(
-                "Write a job application for the position of Flutter Developer in a software company.",
-                style: TextStyle(
+              /// QUESTION FROM JSON
+              Text(
+                question,
+                style: const TextStyle(
                   fontSize: 17,
                   fontFamily: "ClashDisplay",
                   fontWeight: FontWeight.w500,
@@ -53,7 +49,6 @@ class ApplicationPage extends StatelessWidget {
 
               const SizedBox(height: 25),
 
-              /// APPLICATION CARD
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
@@ -67,57 +62,39 @@ class ApplicationPage extends StatelessWidget {
                     )
                   ],
                 ),
-
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-
-                    /// FROM
                     TextField(
                       cursorColor: Colors.orange,
                       decoration: const InputDecoration(
                         hintText: "From",
                         border: InputBorder.none,
                       ),
-                      style: const TextStyle(
-                        fontFamily: "ClashDisplay",
-                      ),
+                      style: const TextStyle(fontFamily: "ClashDisplay"),
                     ),
-
                     const Divider(),
                     const SizedBox(height: 15),
-
-                    /// TO
                     TextField(
                       cursorColor: Colors.orange,
                       decoration: const InputDecoration(
                         hintText: "To",
                         border: InputBorder.none,
                       ),
-                      style: const TextStyle(
-                        fontFamily: "ClashDisplay",
-                      ),
+                      style: const TextStyle(fontFamily: "ClashDisplay"),
                     ),
-
                     const Divider(),
                     const SizedBox(height: 15),
-
-                    /// SUBJECT
                     TextField(
                       cursorColor: Colors.orange,
                       decoration: const InputDecoration(
                         hintText: "Subject",
                         border: InputBorder.none,
                       ),
-                      style: const TextStyle(
-                        fontFamily: "ClashDisplay",
-                      ),
+                      style: const TextStyle(fontFamily: "ClashDisplay"),
                     ),
-
                     const Divider(),
                     const SizedBox(height: 15),
-
-                    /// MAIN CONTENT
                     TextField(
                       maxLines: 8,
                       cursorColor: Colors.orange,
@@ -125,36 +102,27 @@ class ApplicationPage extends StatelessWidget {
                         hintText: "Write your application here...",
                         border: InputBorder.none,
                       ),
-                      style: const TextStyle(
-                        fontFamily: "ClashDisplay",
-                      ),
+                      style: const TextStyle(fontFamily: "ClashDisplay"),
                     ),
-
                     const Divider(),
                     const SizedBox(height: 15),
-
-                    /// CLOSING
                     TextField(
                       cursorColor: Colors.orange,
                       decoration: const InputDecoration(
                         hintText: "Yours faithfully / sincerely",
                         border: InputBorder.none,
                       ),
-                      style: const TextStyle(
-                        fontFamily: "ClashDisplay",
-                      ),
+                      style: const TextStyle(fontFamily: "ClashDisplay"),
                     ),
                   ],
                 ),
               ),
 
-              const SizedBox(height: 100), // space for button
+              const SizedBox(height: 100),
             ],
           ),
         ),
       ),
-
-      /// 🔹 FIXED SUBMIT BUTTON
       bottomNavigationBar: Container(
         padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
         color: const Color(0xfff2f2f2),

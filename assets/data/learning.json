@@ -7,6 +7,18 @@
     "reports": {
       "title": "Reports",
       "question": "Write a report about the importance of clean campus environment"
+    },
+    "applications_cv": {
+      "title": "Applications / CV",
+      "question": "Write a job application for the position of Flutter Developer in a software company."
+    },
+    "essays": {
+      "title": "Essays",
+      "question": "Write an essay about the importance of technology in education."
+    },
+    "professional_communication": {
+      "title": "Professional Communication",
+      "question": "Write a professional message to your manager requesting a meeting to discuss a project update."
     }
   },
   "listening": {
