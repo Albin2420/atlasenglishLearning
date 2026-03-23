@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import '../../controller/HomeScreen/home_screen_controller.dart';
 import '../../widgets/HomeScreen/topic_card.dart';
+import '../Speaking/speaking_page.dart';
 import '../Writing/writing_page.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -149,7 +150,7 @@ class HomeScreen extends StatelessWidget {
                       title: "Speaking",
                       image: "assets/images/summer.png",
                       onTap: () {
-                        // Get.to(() => SpeakingPage());
+                        Get.to(() => SpeakingPage());
                       },
                     ),
                     TopicCard(
