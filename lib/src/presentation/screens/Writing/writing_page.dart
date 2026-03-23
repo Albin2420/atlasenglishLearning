@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../Components/homebottom_nav.dart';
 import '../../controller/Writing/writing_controller.dart';
 
 class WritingPage extends StatelessWidget {
@@ -89,6 +90,9 @@ class WritingPage extends StatelessWidget {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: Container(
+        child: HomeHeaderWidget(),
       ),
     );
   }
