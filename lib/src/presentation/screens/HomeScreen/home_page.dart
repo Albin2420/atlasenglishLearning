@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import '../../controller/HomeScreen/home_screen_controller.dart';
 import '../../widgets/HomeScreen/topic_card.dart';
+import '../Writing/writing_page.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -141,7 +142,7 @@ class HomeScreen extends StatelessWidget {
                       title: "Writing",
                       image: "assets/images/smile.png",
                       onTap: () {
-                        // Get.to(() => WritingPage());
+                        Get.to(() => WritingPage());
                       },
                     ),
                     TopicCard(
