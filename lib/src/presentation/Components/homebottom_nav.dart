@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class HomeHeaderWidget extends StatelessWidget {
-  const HomeHeaderWidget({super.key});
+  final VoidCallback? onTap;
+
+  const HomeHeaderWidget({super.key, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class HomeHeaderWidget extends StatelessWidget {
         alignment: Alignment.center,
         children: [
 
-          /// 🔹 Background split (white + green)
+          /// 🔹 Background split
           Column(
             children: [
               Expanded(
@@ -39,9 +41,12 @@ class HomeHeaderWidget extends StatelessWidget {
             ),
             child: Padding(
               padding: const EdgeInsets.all(18),
-              child: Image.asset(
-                "assets/images/home.png",
-                color: Colors.white,
+              child: GestureDetector(
+                onTap: onTap,
+                child: Image.asset(
+                  "assets/images/home.png",
+                  color: Colors.white,
+                ),
               ),
             ),
           ),

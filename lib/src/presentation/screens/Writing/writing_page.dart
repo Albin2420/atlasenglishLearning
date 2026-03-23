@@ -91,8 +91,10 @@ class WritingPage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: Container(
-        child: HomeHeaderWidget(),
+      bottomNavigationBar: HomeHeaderWidget(
+        onTap: () {
+          Get.back();
+        },
       ),
     );
   }
