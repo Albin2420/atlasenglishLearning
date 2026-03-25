@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import '../../controller/HomeScreen/home_screen_controller.dart';
 import '../../widgets/HomeScreen/topic_card.dart';
 import '../Listening/listening_page.dart';
+import '../Reading/reading_page.dart';
 import '../Speaking/speaking_page.dart';
 import '../Writing/writing_page.dart';
 
@@ -71,10 +72,9 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
 
-                // const SizedBox(height: 25),
+                const SizedBox(height: 25),
                 DailySpeak(
                   onTap: () {
-                    // Get.to(() => YourNextPage());
                   },
                 ),
                 const SizedBox(height: 30),
@@ -165,7 +165,7 @@ class HomeScreen extends StatelessWidget {
                       title: "Reading",
                       image: "assets/images/read.png",
                       onTap: () {
-                        // Get.to(() => ReadingPage());
+                        Get.to(() => ReadingPage());
                       },
                     ),
                   ],

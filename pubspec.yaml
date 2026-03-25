@@ -40,6 +40,8 @@ dependencies:
   just_audio: ^0.10.5
   audio_session: ^0.2.3
   record: ^6.2.0
+  audio_waveforms: ^2.0.2
+  google_fonts: ^8.0.2
 
 dev_dependencies:
   flutter_test:
@@ -75,7 +77,6 @@ flutter:
   assets:
       - assets/data/
       - assets/images/
-      - assets/audio/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
