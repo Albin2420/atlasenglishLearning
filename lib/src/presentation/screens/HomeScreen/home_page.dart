@@ -72,10 +72,9 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
 
-                // const SizedBox(height: 25),
+                const SizedBox(height: 25),
                 DailySpeak(
                   onTap: () {
-                    // Get.to(() => YourNextPage());
                   },
                 ),
                 const SizedBox(height: 30),
