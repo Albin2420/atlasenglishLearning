@@ -22,7 +22,7 @@ class HomeHeaderWidget extends StatelessWidget {
               ),
               Expanded(
                 flex: 1,
-                child: Container(color: const Color(0xFF3BC0A6)),
+                child: Container(color: const Color(0xFF2563EB)),
               ),
             ],
           ),
@@ -32,7 +32,7 @@ class HomeHeaderWidget extends StatelessWidget {
             height: 80,
             width: 80,
             decoration: BoxDecoration(
-              color: const Color(0xFF3BC0A6),
+              color: const Color(0xFF2563EB),
               shape: BoxShape.circle,
               border: Border.all(
                 color: Colors.white,

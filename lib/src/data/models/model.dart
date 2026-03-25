@@ -1,58 +1,87 @@
-class LearningModel {
-  final Map<String, WritingModel> writing;
-  final Map<String, ListeningModel> listening;
+class WritingModel {
+  final int id;
+  final String number;
+  final String title;
+  final String question;
 
-  LearningModel({required this.writing, required this.listening});
+  WritingModel({
+    required this.id,
+    required this.number,
+    required this.title,
+    required this.question,
+  });
 
-  factory LearningModel.fromJson(Map<String, dynamic> json) {
-    return LearningModel(
-      writing: (json['writing'] as Map<String, dynamic>).map(
-        (key, value) => MapEntry(key, WritingModel.fromJson(value)),
-      ),
-      listening: (json['listening'] as Map<String, dynamic>).map(
-        (key, value) => MapEntry(key, ListeningModel.fromJson(value)),
-      ),
+  factory WritingModel.fromJson(Map<String, dynamic> json) {
+    return WritingModel(
+      id: json['id'],
+      number: json['number'],
+      title: json['title'],
+      question: json['question'],
     );
   }
 }
 
-class WritingModel {
+
+class ListeningSectionModel {
   final String title;
-  final String question;
+  final List<ListeningLesson> lessons;
 
-  WritingModel({required this.title, required this.question});
+  ListeningSectionModel({required this.title, required this.lessons});
 
-  factory WritingModel.fromJson(Map<String, dynamic> json) {
-    return WritingModel(title: json['title'], question: json['question']);
-  }
-}
-
-class ListeningModel {
-  final String audio;
-  final List<QuestionModel> questions;
-
-  ListeningModel({required this.audio, required this.questions});
-
-  factory ListeningModel.fromJson(Map<String, dynamic> json) {
-    return ListeningModel(
-      audio: json['audio'],
-      questions: (json['questions'] as List)
-          .map((e) => QuestionModel.fromJson(e))
+  factory ListeningSectionModel.fromJson(Map<String, dynamic> json) {
+    return ListeningSectionModel(
+      title:   json['title'],
+      lessons: (json['lessons'] as List)
+          .map((e) => ListeningLesson.fromJson(e))
           .toList(),
     );
   }
 }
 
-class QuestionModel {
+class ListeningLesson {
+  final String title;
+  final String subtitle;
+  final String audioUrl;      // ← renamed from audioAsset, now a Drive URL
+  final String imageAsset;
+  final List<ListeningQuestion> questions;
+
+  ListeningLesson({
+    required this.title,
+    required this.subtitle,
+    required this.audioUrl,
+    required this.imageAsset,
+    required this.questions,
+  });
+
+  factory ListeningLesson.fromJson(Map<String, dynamic> json) {
+    return ListeningLesson(
+      title:      json['title'],
+      subtitle:   json['subtitle'],
+      audioUrl:   json['audioUrl'],   // matches JSON key "audioUrl"
+      imageAsset: json['imageAsset'],
+      questions:  (json['questions'] as List)
+          .map((e) => ListeningQuestion.fromJson(e))
+          .toList(),
+    );
+  }
+}
+
+class ListeningQuestion {
   final String question;
   final List<String> options;
+  final int correctIndex;
 
-  QuestionModel({required this.question, required this.options});
+  ListeningQuestion({
+    required this.question,
+    required this.options,
+    required this.correctIndex,
+  });
 
-  factory QuestionModel.fromJson(Map<String, dynamic> json) {
-    return QuestionModel(
-      question: json['question'],
-      options: List<String>.from(json['options']),
+  factory ListeningQuestion.fromJson(Map<String, dynamic> json) {
+    return ListeningQuestion(
+      question:     json['question'],
+      options:      List<String>.from(json['options']),
+      correctIndex: json['correctIndex'],
     );
   }
 }

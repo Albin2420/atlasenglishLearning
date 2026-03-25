@@ -10,9 +10,9 @@ class EssayPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xfff2f2f2),
+      backgroundColor: const Color(0xffFAFAFA),
       appBar: AppBar(
-        backgroundColor: const Color(0xfff2f2f2),
+        backgroundColor: const Color(0xffFAFAFA),
         elevation: 0,
         scrolledUnderElevation: 0,
         leading: GestureDetector(

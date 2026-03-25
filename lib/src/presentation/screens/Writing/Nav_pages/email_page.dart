@@ -10,9 +10,9 @@ class FormalEmailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF4F4F4),
+      backgroundColor: const Color(0xFFFAFAFA),
       appBar: AppBar(
-        backgroundColor: const Color(0xFFF4F4F4),
+        backgroundColor: const Color(0xffFAFAFA),
         elevation: 0,
         scrolledUnderElevation: 0,
         leading: GestureDetector(
