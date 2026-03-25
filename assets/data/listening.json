@@ -1,0 +1,117 @@
+{
+  "listening": {
+    "news_lectures": {
+      "title": "News & Lectures",
+      "lessons": [
+        {
+          "title": "Coffee Shop Ordering",
+          "subtitle": "Everyday Scenarios • Intermediate",
+          "audioUrl": "https://drive.google.com/file/d/16bQSrGNdlHoNkoynwQvXOGd4Unns9JAn/view?usp=drive_link",
+          "imageAsset": "assets/images/coffee.png",
+          "questions": [
+            {
+              "question": "1. What type of coffee was ordered?",
+              "options": ["Espresso", "Cappuccino", "Latte", "Americano"],
+              "correctIndex": 2
+            },
+            {
+              "question": "2. Where is the conversation happening?",
+              "options": ["Restaurant", "Coffee shop", "Office", "Library"],
+              "correctIndex": 1
+            }
+          ]
+        },
+        {
+          "title": "Morning News Bulletin",
+          "subtitle": "News & Media • Advanced",
+          "audioUrl": "https://drive.google.com/file/d/1OSIyRKXILcSUZCjRpKbandt_ZZM1vWFG/view?usp=drive_link",
+          "imageAsset": "assets/images/flower.png",
+          "questions": [
+            {
+              "question": "1. What is the main topic of the bulletin?",
+              "options": ["Sports", "Politics", "Weather", "Finance"],
+              "correctIndex": 1
+            },
+            {
+              "question": "2. When was the report recorded?",
+              "options": ["Morning", "Afternoon", "Evening", "Night"],
+              "correctIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+
+    "workplace_conversations": {
+      "title": "Workplace Conversations",
+      "lessons": [
+        {
+          "title": "Office Discussion",
+          "subtitle": "Workplace • Intermediate",
+          "audioUrl": "https://drive.google.com/file/d/1OSIyRKXILcSUZCjRpKbandt_ZZM1vWFG/view?usp=drive_link",
+          "imageAsset": "assets/images/car.png",
+          "questions": [
+            {
+              "question": "1. What is the meeting about?",
+              "options": ["Sales", "Project", "Hiring", "Budget"],
+              "correctIndex": 1
+            },
+            {
+              "question": "2. Who is speaking?",
+              "options": ["Manager", "Client", "Intern", "CEO"],
+              "correctIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+
+    "authentic_audio": {
+      "title": "Authentic Audio",
+      "lessons": [
+        {
+          "title": "Nature Talk",
+          "subtitle": "Natural Sounds • Beginner",
+          "audioUrl": "https://drive.google.com/file/d/1taTlbGJPtMeh6aF8sPzsmy2kM_rDWBL3/view?usp=drive_link",
+          "imageAsset": "assets/images/flower.png",
+          "questions": [
+            {
+              "question": "1. What is being described?",
+              "options": ["Forest", "Ocean", "City", "Mountain"],
+              "correctIndex": 0
+            },
+            {
+              "question": "2. What is the mood?",
+              "options": ["Calm", "Busy", "Sad", "Exciting"],
+              "correctIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+
+    "listening_specific_info": {
+      "title": "Listening for Specific Information",
+      "lessons": [
+        {
+          "title": "Food Ordering",
+          "subtitle": "Specific Info • Intermediate",
+          "audioUrl": "https://drive.google.com/file/d/19lyyh39_XldmpqGp2QKA1E5LxqWXYR6p/view?usp=drive_link",
+          "imageAsset": "assets/images/food.png",
+          "questions": [
+            {
+              "question": "1. What was ordered?",
+              "options": ["Pizza", "Burger", "Pasta", "Salad"],
+              "correctIndex": 2
+            },
+            {
+              "question": "2. Where is the conversation?",
+              "options": ["Cafe", "Home", "Street", "Office"],
+              "correctIndex": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

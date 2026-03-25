@@ -1,0 +1,34 @@
+{
+  "writing": {
+    "formal_informal_emails": {
+      "id": 23,
+      "number": "01",
+      "title": "Formal/Informal Emails",
+      "question": "Write a formal email to your school principal requesting a re-exam due to a medical emergency."
+    },
+    "reports": {
+      "id": 24,
+      "number": "02",
+      "title": "Reports",
+      "question": "Write a report about the importance of clean campus environment"
+    },
+    "applications_cv": {
+      "id": 25,
+      "number": "03",
+      "title": "Applications / CV",
+      "question": "Write a job application for the position of Flutter Developer in a software company."
+    },
+    "essays": {
+      "id": 26,
+      "number": "04",
+      "title": "Essays",
+      "question": "Write an essay about the importance of technology in education."
+    },
+    "professional_communication": {
+      "id": 27,
+      "number": "05",
+      "title": "Professional Communication",
+      "question": "Write a professional message to your manager requesting a meeting to discuss a project update."
+    }
+  }
+}

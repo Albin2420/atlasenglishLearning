@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import '../../controller/HomeScreen/home_screen_controller.dart';
 import '../../widgets/HomeScreen/topic_card.dart';
+import '../Listening/listening_page.dart';
 import '../Speaking/speaking_page.dart';
 import '../Writing/writing_page.dart';
 
@@ -22,7 +23,7 @@ class HomeScreen extends StatelessWidget {
       ),
     );
     return Scaffold(
-      backgroundColor: const Color(0xFFF2F2F2),
+      backgroundColor: const Color(0xFFFAFAFA),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -70,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
 
-                const SizedBox(height: 25),
+                // const SizedBox(height: 25),
                 DailySpeak(
                   onTap: () {
                     // Get.to(() => YourNextPage());
@@ -99,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                             decoration: BoxDecoration(
                               color: isSelected
-                                  ? const Color(0xFFFF4D4D)
+                                  ? const Color(0xFF2563EB)
                                   : Colors.white,
                               borderRadius: BorderRadius.circular(30),
                               boxShadow: isSelected
@@ -141,28 +142,28 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     TopicCard(
                       title: "Writing",
-                      image: "assets/images/smile.png",
+                      image: "assets/images/write.png",
                       onTap: () {
                         Get.to(() => WritingPage());
                       },
                     ),
                     TopicCard(
                       title: "Speaking",
-                      image: "assets/images/summer.png",
+                      image: "assets/images/speak.png",
                       onTap: () {
                         Get.to(() => SpeakingPage());
                       },
                     ),
                     TopicCard(
                       title: "Listening",
-                      image: "assets/images/balls.png",
+                      image: "assets/images/listen.png",
                       onTap: () {
-                        // Get.to(() => ListeningPage());
+                        Get.to(() => ListeningPage());
                       },
                     ),
                     TopicCard(
                       title: "Reading",
-                      image: "assets/images/summer.png",
+                      image: "assets/images/read.png",
                       onTap: () {
                         // Get.to(() => ReadingPage());
                       },
