@@ -16,8 +16,8 @@ class AtlasEnglishLearningApp extends StatelessWidget {
       builder: EasyLoading.init(),
       // home: Onboarding(),
       // home: HomeScreen(),
-      home: SignupPage(),
-      // home: LoginPage(),
+      // home: SignupPage(),
+      home: LoginPage(),
     );
   }
 }
